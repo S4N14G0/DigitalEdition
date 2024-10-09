@@ -1,0 +1,188 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+body{
+    background-color: rgb(179, 179, 179);
+    height: 200vw;
+    display: block;
+    margin: -0vw;
+
+}
+#Portada{
+    margin-top: -80px;
+    width: 100%;
+    z-index: 0;
+}
+
+.PantallaPrincipal{
+    position: fixed;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    height: 50vw;
+}
+
+.inicio h1{
+    margin-left: 2vw;
+    margin-top: -48vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 7vw;
+    height: 40vw;
+    display: grid;
+    place-items: center;
+}
+.logo{
+    position: absolute;
+    margin-left: 39%;
+    margin-top: -45vw;
+    width: 20vw;
+    display: grid;
+    place-items: center;
+}
+
+.Pantalla{
+    display: flex;
+    position: relative;
+    height: 620px;
+}
+#segunda{
+    height: 660px;
+    margin-top: 40px;    
+    background: linear-gradient(
+        80deg,
+        #01060A,
+        #495B71,
+        #495B71,
+        #495B71,
+        #01060A
+    ); 
+}
+
+
+#tercera{   
+    margin-top: -70px; 
+    background-color: rgb(199, 199, 199);
+    border-radius: 3vw;
+    z-index: 1;
+}
+
+#cuarta{   
+    margin-top: -40px;
+    background-color: rgb(91, 0, 0);
+
+}
+
+#quinta{   
+    background-color: rgb(0, 30, 62);
+}
+header{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: -80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    transition: 0.6s;
+    padding: 30px 60px;
+}
+header.sticky{
+    padding: 5px 60px;
+    background-color: white;
+}
+header .logo1{
+    left: 80px;
+    position: relative;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-items: center;
+    align-items: center; 
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: rgb(255, 254, 254);
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+header.sticky .logo1,
+header.sticky ul li a{
+    color: rgb(0, 0, 0);
+}
+.presentacion{
+    color:#F6F2F6;
+    position: relative;
+    margin-top: 10vw;
+    margin-left: 8vw;
+    font-size: 1.5vw;
+    text-align: center;
+}
+.highlight{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffab3d;
+}
+.Fotografo{
+    position: absolute;
+    margin-left: 51vw;
+    margin-top: 2vw;
+    display: grid;
+    place-items: center;
+    width: auto;
+    height: 34vw;
+    z-index: 2;
+}
+.cuadro{
+    position: absolute;
+    transform: translate(53.3vw,36vw);
+    z-index: 3;
+    border-radius:3vw;
+    width: 30vw;
+    height: 5vw;
+    border: 4px ;
+    border: 4px solid #ffffff;
+    background-color: #58545B;
+}
+.cuadro h1{
+    margin-top: 1.3vw;
+    color:#F6F2F6;
+    font-size: 2vw;
+    text-align: center;
+}
+#cuadro2{
+    border: none;
+    background-color: #becbd1;
+    border-radius:13vw;
+    border-bottom-right-radius:0vw;
+    border-bottom-left-radius: 0ch;
+    width: 33vw;
+    height: 42vw;
+    z-index: 0;
+    transform: translate(52vw,11vw);
+    
+}
+.presentacion2{
+    width: 40vw;
+    position: absolute;
+    color:#c4c1c4;
+    margin-top: 17vw;
+    margin-left: 4.5vw;
+    font-size: 1.1vw;
+    text-align: justify;
+}
