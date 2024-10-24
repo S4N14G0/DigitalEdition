@@ -6,11 +6,14 @@ body{
     height: 200vw;
     display: block;
     margin: -0vw;
-
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    display: none;
 }
 #Portada{
     margin-top: -80px;
-    width: 100%;
+    width: 102%;
     z-index: 0;
 }
 
@@ -22,7 +25,7 @@ body{
 }
 
 .inicio h1{
-    margin-left: 2vw;
+    margin-left: 4vw;
     margin-top: -48vw;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(255, 255, 255);
@@ -31,15 +34,20 @@ body{
     display: grid;
     place-items: center;
 }
-.logo{
+.logo1{
     position: absolute;
-    margin-left: 39%;
-    margin-top: -45vw;
-    width: 20vw;
-    display: grid;
-    place-items: center;
 }
-
+.log{
+    position: absolute;
+    margin-left: 2vw;
+    width: 10vw;
+    z-index: 1;
+}
+.loga{
+    position: absolute;
+    margin-left: -2vw;
+    width: 8vw;
+}
 .Pantalla{
     display: flex;
     position: relative;
@@ -48,27 +56,44 @@ body{
 #segunda{
     height: 660px;
     margin-top: 40px;    
-    background: linear-gradient(
-        80deg,
-        #01060A,
-        #495B71,
-        #495B71,
-        #495B71,
-        #01060A
-    ); 
+    background-color: #2c2c2c;
 }
 
-
 #tercera{   
+    height:12vw;
     margin-top: -70px; 
-    background-color: rgb(199, 199, 199);
-    border-radius: 3vw;
+    background-color: #e0bc50;
     z-index: 1;
 }
 
+ @-webkit-keyframes color-change-2x {
+    0% {
+      background: #e8d20a;
+    }
+    100% {
+      background: #fff56d;
+    }
+  }
+  @keyframes color-change-2x {
+    0% {
+      background: #ebd807;
+    }
+    100% {
+      background: #fff495;
+    }
+  }
+  
+#bg-pan-left {
+    width: 100vw;
+	-webkit-animation: color-change-2x 2s linear infinite alternate both;
+	        animation: color-change-2x 2s linear infinite alternate both;
+}
+
+  
 #cuarta{   
+    height: 120vw;
     margin-top: -40px;
-    background-color: rgb(91, 0, 0);
+    background-color: rgb(31, 31, 31);
 
 }
 
@@ -92,15 +117,26 @@ header.sticky{
     padding: 5px 60px;
     background-color: white;
 }
-header .logo1{
-    left: 80px;
-    position: relative;
-    font-weight: 700;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+header.sticky .log{
+    margin-left: 3.5vw;
+    margin-top: -2.5vw;
+    width: 5vw;
+    z-index: -1;
+}
+header .log{
+    margin-top: -4vw;
+    width: 8vw;
+    transition: 0.6s;
+}
+header.sticky .loga{
+    margin-left: 3.5vw;
+    margin-top: -2.5vw;
+    width: 5vw;
+}
+header .loga{
+    margin-left: 2vw;
+    margin-top: -4vw;
+    width: 8vw;
     transition: 0.6s;
 }
 header ul{
@@ -114,6 +150,7 @@ header ul li{
     list-style: none;
 }
 header ul li a{
+    left: 72vw;
     position: relative;
     margin: 0 15px;
     text-decoration: none;
@@ -130,17 +167,17 @@ header.sticky ul li a{
     color:#F6F2F6;
     position: relative;
     margin-top: 10vw;
-    margin-left: 8vw;
+    margin-left: 10vw;
     font-size: 1.5vw;
     text-align: center;
 }
 .highlight{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: #ffab3d;
+    color: #f8ba4d;
 }
 .Fotografo{
     position: absolute;
-    margin-left: 51vw;
+    margin-left: 53vw;
     margin-top: 2vw;
     display: grid;
     place-items: center;
@@ -150,39 +187,243 @@ header.sticky ul li a{
 }
 .cuadro{
     position: absolute;
-    transform: translate(53.3vw,36vw);
+    transform: translate(11vw,33vw);
     z-index: 3;
     border-radius:3vw;
     width: 30vw;
     height: 5vw;
-    border: 4px ;
-    border: 4px solid #ffffff;
-    background-color: #58545B;
+    border:none;
+    background-color: #ffffff; 
+    overflow: hidden;
+    box-shadow: 6px 6px 12px #0f0f0f,
+                -6px -6px 12px #3c3c3c;
+    cursor: pointer;
 }
+
+#cuadro1::before {
+    content: '';
+    width: 0;
+    height: 4.3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: -1.1vw;
+    background-image: linear-gradient(to right, #d8a60f 0%, #f9f047 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+    color:#ffffff;
+   }
+   
+   #cuadro1:hover::before {
+    width: 27em;
+    height: 4.3em;
+
+   }
 .cuadro h1{
     margin-top: 1.3vw;
-    color:#F6F2F6;
+    color:#000000;
     font-size: 2vw;
     text-align: center;
 }
 #cuadro2{
     border: none;
-    background-color: #becbd1;
-    border-radius:13vw;
-    border-bottom-right-radius:0vw;
-    border-bottom-left-radius: 0ch;
-    width: 33vw;
-    height: 42vw;
+    background-color: #f8ba4d;
+    border-radius: 2vw;
+    width: 37vw;
+    height: 25vw;
     z-index: 0;
-    transform: translate(52vw,11vw);
-    
+    transform: translate(51vw,10.95vw);
+    box-shadow: 6px 6px 12px #000000;
 }
 .presentacion2{
     width: 40vw;
     position: absolute;
     color:#c4c1c4;
-    margin-top: 17vw;
-    margin-left: 4.5vw;
-    font-size: 1.1vw;
+    margin-top: 18vw;
+    margin-left: 6.5vw;
+    font-size: 0.9vw;
     text-align: justify;
 }
+
+.TituloTarjeta h1{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 2vw;
+    font-size: 3.4vw;
+    color: #000000;
+    font-family:'Times New Roman', Times, serif;
+}
+.TituloTarjeta h2{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 7vw;
+    font-size: 2vw;
+    color: #000000;
+    font-family:'Times New Roman', Times, serif;
+}
+.Tarjeta{
+    width: 100%;
+    align-items: center;
+    position: relative;
+    display: grid;
+    top: 3.4vw;
+    left: 10vw;
+    
+}
+.trj{
+    width: 80vw;
+    border-radius: 2vw;
+    overflow: hidden;
+    box-shadow:0px 12px 17px #000000,
+    0px -6px 12px #3e3e3e;
+}
+#imgTarjeta{
+    width: 35vw;
+    height: 30vw;
+    margin-top: 0vw;
+}
+#imgTarjeta2{
+    width: 35vw;
+    margin-top: -6vw;
+    margin-left: 45vw;
+}
+#imgTarjeta3{
+    width: 35vw;
+    margin-top:-8vw;
+}
+#Tarjeta1{
+    height: 30vw;
+    background-color: #949494;
+}
+#Tarjeta2{
+    height: 30vw;
+    background-color: #949494;
+    margin-top: -10vw;
+}
+#Tarjeta3{
+    height: 30vw;
+    background-color: #949494;
+    margin-top: -10vw;
+}
+.txtTarjeta1{
+    font-size: 2vw;
+    color: #000;
+    text-align: center;
+    margin-top: -28vw;
+    margin-left: 42vw;
+    width: 30vw;
+}
+.txtTarjeta1 h2{
+    font-size: 1.5vw;
+}
+.btnTarjeta{
+    overflow: hidden;
+    position: absolute;
+    width: 20vw;
+    height: 5vw;
+    transform: translate(47vw,3vw);
+    border-radius: 10vw;
+    border: none;
+    box-shadow: 6px 6px 12px #1e1e1e,
+    -6px -6px 12px #979797;
+    cursor: pointer;
+    font-size: 1.5vw;
+}
+
+.btnTarjeta::before {
+    content: '';
+    width: 0vw;
+    height: 5vw;
+    border-radius: 30em;
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+    background-image: linear-gradient(to right, #d8a60f 0%, #f9f047 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+    color:#ffffff;
+   }
+   
+   .btnTarjeta:hover::before {
+    width: 20vw;
+    height: 5vw;
+    color:#ffffff;
+   }
+
+.txtTarjeta2{
+    font-size: 2vw;
+    color: #000;
+    text-align: center;
+    margin-top: -38vw;
+    margin-left: 8vw;
+    width: 30vw;
+}
+.txtTarjeta2 h2{
+    font-size: 1.5vw;
+}
+#btnTarjeta2{
+    left: -34vw;
+}
+
+.txtTarjeta3{
+    font-size: 2vw;
+    color: #000;
+    text-align: center;
+    margin-top: -52vw;
+    margin-left: 43vw;
+    width: 30vw;
+}
+.txtTarjeta3 h2{
+    font-size: 1.5vw;
+}
+#btnTarjeta3{
+    left: 0vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
