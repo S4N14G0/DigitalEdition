@@ -1,12 +1,16 @@
 *{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: rgb(179, 179, 179);
     height: 200vw;
     display: block;
     margin: -0vw;
     overflow-x: hidden;
+
 }
 ::-webkit-scrollbar{
     display: none;
@@ -60,9 +64,9 @@ body{
 }
 
 #tercera{   
-    height:12vw;
+    height: 25vw;
     margin-top: -70px; 
-    background-color: #e0bc50;
+    background-color: #e9e9e9;
     z-index: 1;
 }
 
@@ -91,14 +95,15 @@ body{
 
   
 #cuarta{   
-    height: 120vw;
+    overscroll-behavior: none;
+    height: 150vw;
     margin-top: -40px;
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(159, 159, 159);
 
 }
 
 #quinta{   
-    background-color: rgb(0, 30, 62);
+    background-color: rgb(29, 29, 29);
 }
 header{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -178,28 +183,32 @@ header.sticky ul li a{
 .Fotografo{
     position: absolute;
     margin-left: 53vw;
-    margin-top: 2vw;
+    margin-top: 6vw;
     display: grid;
     place-items: center;
     width: auto;
     height: 34vw;
     z-index: 2;
+    background-color: #c4c1c4;
 }
 .cuadro{
     position: absolute;
     transform: translate(11vw,33vw);
     z-index: 3;
-    border-radius:3vw;
+
     width: 30vw;
     height: 5vw;
     border:none;
     background-color: #ffffff; 
     overflow: hidden;
-    box-shadow: 6px 6px 12px #0f0f0f,
-                -6px -6px 12px #3c3c3c;
-    cursor: pointer;
-}
 
+}
+#cuadro1{
+    cursor:pointer;
+    box-shadow: 6px 6px 12px #0f0f0f,
+    -6px -6px 12px #3c3c3c;
+    border-radius:3vw;
+}
 #cuadro1::before {
     content: '';
     width: 0;
@@ -213,7 +222,8 @@ header.sticky ul li a{
     display: block;
     z-index: -1;
     color:#ffffff;
-   }
+
+    }
    
    #cuadro1:hover::before {
     width: 27em;
@@ -229,12 +239,10 @@ header.sticky ul li a{
 #cuadro2{
     border: none;
     background-color: #f8ba4d;
-    border-radius: 2vw;
-    width: 37vw;
-    height: 25vw;
+    width: 40vw;
+    height: 44vw;
     z-index: 0;
-    transform: translate(51vw,10.95vw);
-    box-shadow: 6px 6px 12px #000000;
+    transform: translate(69vw,0vw);
 }
 .presentacion2{
     width: 40vw;
@@ -246,143 +254,115 @@ header.sticky ul li a{
     text-align: justify;
 }
 
-.TituloTarjeta h1{
+
+.iconos{
+    display: inline-block;
+    width:10vw;
+    height: 10vw;
+    padding-left: 12.3vw;
+    margin-top: 6vw;
+}
+#diploma{
+    width: 7vw;
+    height: 7vw;
+    margin-top: 8vw;
+}
+#fiesta{
+    width: 7vw;
+    height: 7vw;
+    margin-top: 8vw;
+}
+.txtIconos1{
+    position: absolute;
+    transform: translate(10.7vw,14vw);
+}
+.txtIconos2{
+    position: absolute;
+    transform: translate(33vw,14vw);
+}
+.txtIconos3{
+    position: absolute;
+    transform: translate(56vw,14vw);
+}
+.txtIconos4{
+    position: absolute;
+    transform: translate(76.5vw,14vw);
+}
+.txtTituloicono{
     position: absolute;
     width: 100%;
     text-align: center;
-    margin-top: 2vw;
-    font-size: 3.4vw;
-    color: #000000;
-    font-family:'Times New Roman', Times, serif;
 }
-.TituloTarjeta h2{
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    margin-top: 7vw;
-    font-size: 2vw;
-    color: #000000;
-    font-family:'Times New Roman', Times, serif;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .Tarjeta{
-    width: 100%;
-    align-items: center;
-    position: relative;
-    display: grid;
-    top: 3.4vw;
-    left: 10vw;
-    
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+
 }
 .trj{
-    width: 80vw;
-    border-radius: 2vw;
-    overflow: hidden;
-    box-shadow:0px 12px 17px #000000,
-    0px -6px 12px #3e3e3e;
+    height: auto;
+
 }
 #imgTarjeta{
     width: 35vw;
     height: 30vw;
-    margin-top: 0vw;
+    transform: translate(10vw,5vw);
+    padding-bottom: 6vw ;
+    border: 10px solid #ffffff;
+    background-color: white;
+    box-shadow: 6px 6px 6px #171717,
+    -6px -6px 6px #b5b5b5;
+    z-index: 2;
 }
 #imgTarjeta2{
     width: 35vw;
-    margin-top: -6vw;
-    margin-left: 45vw;
+    transform: translate(55vw,-6vw);
+    padding-bottom: 6vw ;
+    border: 10px solid white;
+    background-color: white;
+    box-shadow: 6px 6px 6px #171717,
+    -6px -6px 6px #b5b5b5;
+    z-index: 2;
 }
 #imgTarjeta3{
     width: 35vw;
-    margin-top:-8vw;
-}
-#Tarjeta1{
-    height: 30vw;
-    background-color: #949494;
-}
-#Tarjeta2{
-    height: 30vw;
-    background-color: #949494;
-    margin-top: -10vw;
-}
-#Tarjeta3{
-    height: 30vw;
-    background-color: #949494;
-    margin-top: -10vw;
-}
-.txtTarjeta1{
-    font-size: 2vw;
-    color: #000;
-    text-align: center;
-    margin-top: -28vw;
-    margin-left: 42vw;
-    width: 30vw;
-}
-.txtTarjeta1 h2{
-    font-size: 1.5vw;
-}
-.btnTarjeta{
-    overflow: hidden;
-    position: absolute;
-    width: 20vw;
-    height: 5vw;
-    transform: translate(47vw,3vw);
-    border-radius: 10vw;
-    border: none;
-    box-shadow: 6px 6px 12px #1e1e1e,
-    -6px -6px 12px #979797;
-    cursor: pointer;
-    font-size: 1.5vw;
+    transform: translate(10vw,-20vw);
+    padding-bottom: 6vw ;
+    border: 10px solid white;
+    background-color: white;
+    box-shadow: 6px 6px 6px #171717,
+    -6px -6px 6px #b5b5b5;
+    z-index: 2;
 }
 
-.btnTarjeta::before {
-    content: '';
-    width: 0vw;
-    height: 5vw;
-    border-radius: 30em;
-    position: absolute;
-    top: 0vw;
-    left: 0vw;
-    background-image: linear-gradient(to right, #d8a60f 0%, #f9f047 100%);
-    transition: .5s ease;
-    display: block;
-    z-index: -1;
-    color:#ffffff;
-   }
-   
-   .btnTarjeta:hover::before {
-    width: 20vw;
-    height: 5vw;
-    color:#ffffff;
-   }
-
-.txtTarjeta2{
-    font-size: 2vw;
-    color: #000;
-    text-align: center;
-    margin-top: -38vw;
-    margin-left: 8vw;
-    width: 30vw;
-}
-.txtTarjeta2 h2{
-    font-size: 1.5vw;
-}
-#btnTarjeta2{
-    left: -34vw;
+.back4ta{
+   width: 100%;
+   height: 10vw;
+   margin-top: -143vw;
+   z-index: 1;
+   color: #000000;
+   border-top: 10px solid rgb(254, 233, 110);   
+   border-bottom: 10px solid white;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Luc;
 }
 
-.txtTarjeta3{
-    font-size: 2vw;
-    color: #000;
-    text-align: center;
-    margin-top: -52vw;
-    margin-left: 43vw;
-    width: 30vw;
-}
-.txtTarjeta3 h2{
-    font-size: 1.5vw;
-}
-#btnTarjeta3{
-    left: 0vw;
-}
+
+
+
+
 
 
 
