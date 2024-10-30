@@ -1,3 +1,5 @@
+
+
 *{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
@@ -26,6 +28,7 @@ body{
     width: 100%;
     background-color: rgb(0, 0, 0);
     height: 50vw;
+    z-index: -10;
 }
 
 .inicio h1{
@@ -56,6 +59,7 @@ body{
     display: flex;
     position: relative;
     height: 620px;
+    z-index: -1;
 }
 #segunda{
     height: 660px;
@@ -96,14 +100,15 @@ body{
   
 #cuarta{   
     overscroll-behavior: none;
-    height: 150vw;
+    height: 149vw;
     margin-top: -40px;
     background-color: rgb(159, 159, 159);
-
 }
 
 #quinta{   
+    height:50vw;
     background-color: rgb(29, 29, 29);
+    overflow: hidden;
 }
 header{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -194,42 +199,49 @@ header.sticky ul li a{
 .cuadro{
     position: absolute;
     transform: translate(11vw,33vw);
-    z-index: 3;
-
+    z-index: 10;
     width: 30vw;
     height: 5vw;
     border:none;
     background-color: #ffffff; 
-    overflow: hidden;
 
 }
 #cuadro1{
-    cursor:pointer;
+    cursor: pointer;
     box-shadow: 6px 6px 12px #0f0f0f,
     -6px -6px 12px #3c3c3c;
     border-radius:3vw;
 }
 #cuadro1::before {
+    transform: translate(11vw,33vw);
     content: '';
-    width: 0;
-    height: 4.3em;
-    border-radius: 30em;
     position: absolute;
-    top: 0;
-    left: -1.1vw;
-    background-image: linear-gradient(to right, #d8a60f 0%, #f9f047 100%);
-    transition: .5s ease;
-    display: block;
-    z-index: -1;
-    color:#ffffff;
-
-    }
-   
-   #cuadro1:hover::before {
-    width: 27em;
-    height: 4.3em;
-
-   }
+    inset: 0;
+    margin: auto;
+    width: 30vw;
+    height: 5vw;
+    border-radius: inherit;
+    scale: 0;
+    z-index: 1;
+    background-color: rgb(193, 163, 98);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  #cuadro1:hover::before {
+    scale: 3;
+  }
+  
+  #cuadro1:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+  }
+  
+  #cuadro1:active {
+    scale: 1;
+  }
+  
+  
 .cuadro h1{
     margin-top: 1.3vw;
     color:#000000;
@@ -294,18 +306,6 @@ header.sticky ul li a{
     text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .Tarjeta{
     width: 100vw;
     height: 100vw;
@@ -317,9 +317,9 @@ header.sticky ul li a{
 
 }
 #imgTarjeta{
-    width: 35vw;
-    height: 30vw;
-    transform: translate(10vw,5vw);
+    width: 45vw;
+    height: auto;
+    transform: translate(5vw,10vw);
     padding-bottom: 6vw ;
     border: 10px solid #ffffff;
     background-color: white;
@@ -328,41 +328,63 @@ header.sticky ul li a{
     z-index: 2;
 }
 #imgTarjeta2{
-    width: 35vw;
+    width: 40vw;
     transform: translate(55vw,-6vw);
     padding-bottom: 6vw ;
     border: 10px solid white;
     background-color: white;
     box-shadow: 6px 6px 6px #171717,
     -6px -6px 6px #b5b5b5;
-    z-index: 2;
+    z-index: 10;
 }
 #imgTarjeta3{
-    width: 35vw;
-    transform: translate(10vw,-20vw);
+    width: 45vw;
+    transform: translate(5vw,-35vw);
     padding-bottom: 6vw ;
     border: 10px solid white;
     background-color: white;
     box-shadow: 6px 6px 6px #171717,
     -6px -6px 6px #b5b5b5;
-    z-index: 2;
+    z-index: 10;
 }
 
 .back4ta{
-   width: 100%;
+   width: 100vw;
    height: 10vw;
-   margin-top: -143vw;
+   margin-top: -135vw;
    z-index: 1;
    color: #000000;
-   border-top: 10px solid rgb(254, 233, 110);   
+   background-color: rgba(0,0,0,0.30);
+   border-top: 10px solid rgb(255, 255, 255);   
    border-bottom: 10px solid white;
    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Luc;
 }
+.back4ta h1{
+    width: 1000vw;
+    position: absolute;
+    font-size: 3vw;
+    z-index: -1;
+    animation: mover 20s linear infinite; 
+}
 
+@keyframes mover {
+    0% {
+        transform: translateX(100vw); /* Comienza en su posición original */
+    }
+    100% {
+        transform: translateX(-200vw); /* Mueve el h1 100px a la derecha */
+    }
+}
 
-
-
-
+.fondo{
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+}
+#fondoContacto{
+    overflow: hidden;
+    margin-top: -16vw;
+}
 
 
 
